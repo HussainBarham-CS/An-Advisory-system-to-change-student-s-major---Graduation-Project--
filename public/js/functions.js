@@ -1,0 +1,3 @@
+function hussein(){
+    alert("hi")
+}

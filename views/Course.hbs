@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="/css/main.css">
+    <link
+    href="https://fonts.googleapis.com/css?family=Poppins:300,900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/css/course.css">
+  <link rel="stylesheet" href="/css/AdminDhash.css">
+    <title> course </title>
+</head>
+<body>
+    <header id="header" style="justify-content: space-between;display:flex">
+        <div class="logo">
+             <img src="../images/Logo.jpg" height="80px">
+         </div> 
+
+         <div class="profileName" style="margin-left:70% ;">
+                <p> {{name}}  </p>
+                <span> {{program}}  </span> 
+            </div> 
+             <div class="profile" onclick="active(menu)">
+                <img  src="../images/user.png" style="background-color:#008088 ;"> 
+            </div>
+
+            
+      </header>
+      <div class="actionOption">
+            <div class="infoContent" style="display: flex; margin-left:40%;margin-top:1%;"> 
+
+              <form action="/userDhash" method="get" id="11">
+                    <a onclick="document.getElementById('11').submit();" class="menu_content"> home </a>
+                </form> 
+
+                <form action="/userDhash" method="get" id="12">
+                    <a onclick="document.getElementById('12').submit();" class="menu_content"> what to do </a>
+                </form> 
+
+                <form action="/order" method="get" id="13">
+                    <a onclick="document.getElementById('13').submit();" class="menu_content"> order </a>
+                </form> 
+                
+                <form action="/courses" method="post" id="14">
+                    <a onclick="document.getElementById('14').submit();" class="menu_content"> courses </a>
+                </form>    
+                
+  
+
+            </div>
+        </div>
+    <div class="content"> 
+        <div class="Nfigures"> 
+        <div class="Figures "> 
+            <div class="figures_content1">
+              <h1 class="first_header"> {{deema}}</h1>
+              <p class="second_header"> hours</p> 
+            </div> 
+            <div class="figures_content2">
+              <img src="../images/graduation.png" width="62px"  >
+            </div> 
+        </div>
+        <div class="Figures "> 
+            <div class="figures_content1">
+              <h1 class="first_header"> {{abd}}</h1>
+              <p class="second_header"> completed </p> 
+            </div> 
+            <div class="figures_content2">
+              <img src="../images/check.png" width="62px"  >
+            </div> 
+        </div>
+        <div class="Figures "> 
+            <div class="figures_content1">
+              <h1 class="first_header"> 0</h1>
+              <p class="second_header"> semester</p> 
+            </div> 
+            <div class="figures_content2">
+              <img src="../images/graduation.png" width="62px"  >
+            </div> 
+        </div>
+    </div>
+
+    
+    
+    <div class="btn-box">
+<button onclick="changeBack(this);courseType(this)" id="btn1"> 
+  <img src="../images/check.png" width="22px"  >
+  complete courses </button> 
+<button onclick="changeBack(this);courseType(this)" id="btn2"> 
+  <img src="../images/graduation.png" width="22px"  >
+  Semester Courses </button> 
+    </div> 
+
+    <div class="Table" id="complete_course"> 
+      <p class="Table_header"> Complete course <br> 
+        <span class="description"> This table contains the completed courses</span> 
+      </p>
+      <div>
+        <div class="searchBox" id="searchBox">
+            <form>
+                <input type="text" placeholder="search for completed course " id="search" onkeyup="myFunction(completed)">
+            </form>
+        </div> 
+      </div>
+        <div class="table-cointer"> 
+          <table class="table" id="completed"> 
+              <thead>
+                  <tr> 
+                      <th>Course name  </th>                     
+                      <th>Course Code </th>
+                      <th>Credit Hours </th>
+                      <th>Course catagory </th>
+                  </tr>
+              </thead>
+              <tbody>
+                {{# each barham}}
+            <tr> 
+              <td > {{this.[1]}} </td> 
+                <td>{{this.[0]}}</td> 
+                <td> {{this.[3]}}</td> 
+                <td>{{this.[4]}} </td> 
+              </tr>
+              {{/ each}}
+            
+        </tbody>
+        </table>
+      </div>
+     </div>
+
+     <div class="Table"  id="semester_course"> 
+      <p class="Table_header"> Semester course <br> 
+        <span class="description"> This table contains the semester program that the student
+          <br> is expected to register or have already registered </span> 
+        </p>
+        <div class="searchBox" id="searchBox">
+        <form>
+            <input type="text" placeholder="search for semester course " id="search" onkeyup="myFunction(semester)">
+        </form>
+        </div>
+              <div class="table-cointer"> 
+          <table class="table" id="semester"> 
+              <thead>
+                  <tr> 
+                      <th>Course name  </th>                     
+                      <th>Course Code </th>
+                      <th>Credit Hours </th>
+                      <th>Course catagory </th>
+                      <th> type</th>
+                  </tr>
+              </thead>
+              <tbody>
+          
+    
+</tbody>
+</table>
+</div>
+ </div>
+
+ <div class="updateCourse" onclick="active(update)"> 
+     <img src="../images/refresh.png" alt="" height="32px" >
+     <div class="updateMsg"> <p> update courses</p> </div>
+ </div>
+
+
+ <div class="requests logInForm LogoutNotification update" id="update">
+    <div class="overlay"> </div>
+    <div class="popUpFormContent">
+        <div class="close-btn" onclick="active(update)">&times;</div>
+        <div class="requestBoxContent">
+            <p> Are you sure you want to delete this </p>
+            <div style="margin-top: 20px;">
+                <a href="#" class="view_order"> yes</a>
+                <a href="#" class="view_order" onclick="active(update)"> No</a>
+            </div>
+        </div>
+    </div>
+ </div>
+
+ 
+    </div>
+
+ <script type="text/javascript" src="../js/index.js"></script>
+
+</body>
+</html>

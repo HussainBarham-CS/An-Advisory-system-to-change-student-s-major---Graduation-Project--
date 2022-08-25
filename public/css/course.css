@@ -1,0 +1,222 @@
+body{
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f4f4;
+
+}
+
+.actionOption{
+    margin-top: 6rem;
+    height: 2rem;
+    padding: 20px;
+}
+.infoContent{
+    text-align: center;
+    font-size: 20px;
+}
+.infoContent a{
+    text-decoration: none;
+    padding: 12px;
+    color: white;
+    transition: 0.2s;
+    color: #008088;
+}
+.infoContent a:hover{
+    opacity: 1;
+    text-decoration: none;
+    padding: 23px;
+    background-color: #008088;
+    color: white;
+}
+.content{
+    height: fit-content;
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+.Nfigures{
+    display: flex;
+    margin: auto;
+    width: 70%;
+    height: auto;
+}
+.Figures{
+    height: 30%;
+    width: 25%;
+    background-color: #ffffffda;
+    display: flex;
+    padding: 12px;
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    transition: 0.5s;
+}
+
+.Figures h1{
+    font-size: 25px;
+}
+.figures_content1{
+    margin-left: 13px;
+}
+.first_header{
+    color: #008088;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(240, 240, 240);
+}
+.second_header {
+    color:#008088;
+    font-size: 20px;
+}
+.figures_content2{
+    margin: auto;
+}
+.Figures:hover{
+    background-color:#f4f4f4;
+    opacity: 1;
+    transition: 0.5s;
+    width: 30%;
+    cursor: pointer;
+}
+.Table{
+    height: fit-content;
+    width: 85%;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.2);
+}
+
+.Table_header{
+    padding: 20px;
+    font-size: 22px;
+    border-bottom: 1px solid #ccc;
+}
+
+.btn-box{
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.btn-box button{
+   border: none;
+   outline: none;
+   cursor: pointer;
+   padding: 14px 16px;
+   margin-right: 50px ;
+   font-size: 20px;
+   font-weight: bold;
+   background: transparent;
+   transition: 0.5s;
+}
+
+.btn-box button:hover{
+    opacity: 1;
+    font-size: 22px;
+    background-color: #f4f4f4;
+    
+ }
+ 
+ #btn1{
+border-bottom: 3px solid #008088 ;
+ }
+
+.description{
+    color: rgb(118, 118, 118);
+    font-size: 1rem;
+    padding-top: 30px;
+    font-weight:lighter;
+ }
+
+.teble-cointer{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+table{
+    table-layout: fixed;
+    width: 98%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+#semester_course{
+display: none;
+}
+.updateCourse{
+    background-color: #008088;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    left: 93.5%;
+    top: 82%;
+    position: fixed;
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.updateCourse img{
+    align-items: center;
+    text-align: center;
+    margin: 19px;
+}
+.updateCourse div{
+    font-size: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: none;
+    border-radius: 4px;
+}
+.updateCourse:hover  .updateMsg{
+    display: block;
+}
+a{
+    text-decoration: none;
+}
+#update .popUpFormContent{
+    width: 550px;
+}
+#update  .close-btn{
+    left: 500px;
+}
+#searchBox{
+    padding: 20px;
+}
+.type p{
+    background-color:#008088;
+    width: 50%;
+    text-align: center;
+    padding: 12px;
+    border-radius: 4px;
+    color: white;
+}
+#alternative p{
+    background-color: rgb(1, 156, 112);
+    color: white;
+
+}
+
+
+@media screen and (max-width: 770px) {
+.Table{
+    width: 98%;
+}
+.table th{
+font-size: 15px;
+}
+.delete_btn{
+    padding: 9px;
+    text-align: center;
+    font-size: 17px;
+    margin: 0px;
+}
+.figures_content2 img{
+width: 42px;
+margin-left: 20px;
+}
+.Figures {
+    height: 20vh;
+    display: block;
+}
+}

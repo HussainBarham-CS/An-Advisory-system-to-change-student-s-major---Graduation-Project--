@@ -1,0 +1,128 @@
+.profile_information{
+    background: linear-gradient(90deg,#011d1f 0%,#024a4f 50%,#008088 100%);  
+    height: 40vh;
+    text-align: center;
+}
+.actionOption{
+    margin-top: 6rem;
+    height: 2rem;
+    padding: 20px;
+}
+.infoContent{
+    text-align: center;
+    font-size: 20px;
+}
+.infoContent a{
+    text-decoration: none;
+    padding: 5px;
+    color: white;
+    transition: 0.2s;
+    margin-left: 12px;
+    color: #008088;
+}
+.infoContent a:hover{
+    opacity: 1;
+    text-decoration: none;
+    padding: 23px;
+    background-color: #008088;
+    color: white;
+}
+
+.optionCard{
+    display: flex;
+    margin: auto;
+    width: 80%;
+    justify-content: space-around;
+}
+.optionPanel{
+    text-align: center;
+    padding: 20px;
+}
+.selectOption{
+    position:absolute;
+    height: 250px;
+    width: 446px;
+    transform: scale(0);
+}
+.frontFace{
+    height: 250px;
+    width: 446px;
+    background: #008088 url("../images/AnajahBack.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+
+}
+.selectOption p{
+    text-align: center;
+    padding: 25px;
+    color: white;
+    font-size: 22px;
+}
+.selectOption .description{
+    padding: 15px;
+    font-size: 18px;
+    color: white;
+}
+.content:hover .selectOption{
+    display: block;
+    transition: 0.03s;
+    transform: scale(1);
+}
+.content:hover .frontFace p{
+    transition: 0.03s;
+    transform: scale(0);
+}
+.view_order{
+    border: none;
+    width: 120px;
+}
+.headerParagraph{
+    font-size: 22px;
+}
+.frontFace p{
+padding: 100px;
+color: white;
+font-size: 25px;
+transform: scale(1);
+opacity: 1;
+}
+.profileContent{
+    padding-top: 50px;
+}
+.profileContent p{
+    color:rgb(154, 153, 153);
+    padding-top: 5px;
+}
+.profileContent a{
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+.content{
+    padding-top: 15px;
+}
+.content p{
+    color: white;
+}
+.what_to_do{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+}
+.notification{
+  text-align: center;
+  cursor: pointer;
+}
+.notification span{
+    background-color: red;
+   position: absolute;
+   width: 14px;
+   border-radius: 50%;
+   color: white;
+   margin-left: 12px;
+  }
+
+
+

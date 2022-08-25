@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alternative course </title>
+    <link rel="stylesheet" href="../css/AdminDhash.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <link rel="stylesheet" href="../css/altern.css">
+    <link rel="stylesheet" href="../css/userDash.css">
+    <link
+    href="https://fonts.googleapis.com/css?family=Poppins:300,900&display=swap"
+    rel="stylesheet"
+  />
+
+</head>
+<body>
+    <header id="header" style="justify-content: space-between;">
+        <div class="logo">
+             <img src="../images/Logo.jpg" height="80px"> 
+         </div> 
+      </header>
+      <div class="actionOption" id="actionOption" style="margin-top: -1%;">
+        <div class="actionOption">
+            <div class="infoContent" style="display: flex; margin-left:40%;margin-top:1%;"> 
+
+              <form action="/userDhash" method="get" id="11">
+                    <a onclick="document.getElementById('11').submit();" class="menu_content"> home </a>
+                </form> 
+
+                <form action="/userDhash" method="get" id="12">
+                    <a onclick="document.getElementById('12').submit();" class="menu_content"> what to do </a>
+                </form> 
+
+                <form action="/order" method="get" id="13">
+                    <a onclick="document.getElementById('13').submit();" class="menu_content"> order </a>
+                </form> 
+                
+                <form action="/courses" method="post" id="14">
+                    <a onclick="document.getElementById('14').submit();" class="menu_content"> courses </a>
+                </form>    
+                
+  
+
+            </div>
+        </div>
+          <div class="alternInfo"> 
+              <p> alternative course </p>
+              <p class="description" id="desc"> 
+                The alternative course is chosen from the current semester's schedule  </p>
+          </div>
+
+          <div class="Table"  id="alternHeader">
+            <div class="alternHeaderContent">
+            <p>Recorded hours:  </p>
+            <p class="ansAques"> 18</p>
+          </div>
+
+          <div class="alternHeaderContent">
+            <p>calculated hours: </p>
+            <p class="ansAques"> 99</p>
+          </div>
+          <div class="alternHeaderContent">
+            <p  title="if you dont a graduate you cant select alternative course">a graduate ?  </p>
+            <p class="graduateOrNot ">graduate</p>
+        </div>
+
+          </div>
+
+        <div class="Table"  id="altern"> 
+            <p class="Table_header"> semester course <br> 
+            </p>
+            <div>
+              <div class="searchBox" id="searchBox">
+                  <form>
+                      <input type="text" placeholder="search for course " id="search" onkeyup="myFunction(completed)">
+                  </form>
+              </div> 
+            </div>
+              <div class="table-cointer"> 
+                <table class="table" id="completed"> 
+                    <thead>
+                        <tr> 
+                            <th>Course name  </th>                     
+                            <th>Course Code </th>
+                            <th>Credit Hours </th>
+                            <th>Course catagory </th>
+                            <th> select </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                  <tr> 
+                    <td class="courseName"> computer science </td> 
+                      <td>11984</td> 
+                      <td> 3</td> 
+                      <td>university </td> 
+                      <td> <a class="view_order" onclick="active(select)"> select </a></td>
+                    </tr>
+                  <tr> 
+                    <td class="courseName"> computer science </td> 
+                    <td>11984</td> 
+                    <td> 3</td> 
+                    <td>university </td> 
+                    <td> <a class="view_order" onclick="active(select)"> select </a></td>
+                  </tr> 
+                  
+                  <tr> 
+                  <td class="courseName"> computer science </td> 
+                  <td>11984</td> 
+                  <td> 3</td> 
+                  <td>university </td> 
+                  <td> <a class="view_order" onclick="active(select)"> select </a></td>
+                </tr> 
+                <tr> 
+                <td class="courseName"> computer science </td> 
+                <td>11984</td> 
+                <td> 3</td> 
+                <td>university </td> 
+                <td> <a class="view_order" onclick="active(select)"> select </a></td>
+            </tr>
+
+            <tr class="alterCourseSelected" title="cant choise as alternative course" > 
+              <td class="courseName"> computer science </td> 
+              <td>11984</td> 
+              <td> 3</td> 
+              <td>university </td> 
+              <td class="imgTd"> 
+                <img src="../images/check (1).png" alt="" height="30px">
+              </td>
+          </tr>
+
+          <tr> 
+            <td class="courseName"> computer science </td> 
+            <td>11984</td> 
+            <td> 3</td> 
+            <td>university </td> 
+            <td> <a class="view_order" onclick="active(select)"> select </a></td>
+        </tr>
+
+              </tbody>
+              </table>
+            </div>
+           </div>
+      </div>
+
+           <!-- 
+             note that you have alternative course in this table 
+             we cant make this course as alternative course again
+
+             class name is --) alterCourseSelected (-- 
+           -->
+
+           <!-- لما الطالب ما يكون خريج بكونو البوتون جميعهم ديس ابل-->
+           
+      <div class="requests logInForm LogoutNotification update" id="select" >
+        <div class="overlay"> </div>
+        <div class="popUpFormContent">
+            <div class="close-btn" onclick="active(select)">&times;</div>
+            <div class="requestBoxContent">
+                <p> Are you sure to perform this operation?    </p>
+                            <div style="margin-top: 20px;">
+                    <a href="#" class="view_order" onclick="selectcourse() ,active(select)"> ok</a>
+                    <a href="#" class="view_order" onclick="active(select)"> cancel</a>
+                </div>
+            </div>
+        </div>
+     </div>    
+
+     <div class="requests logInForm LogoutNotification update" id="filter">
+      <div class="overlay"> </div>
+      <div class="popUpFormContent">
+          <div class="close-btn" onclick="active(filter)">&times;</div>
+          <div class="requestBoxContent">
+            <img src="../images/filter.png" alt="" height="30px">
+              <p> filter by <span> </span> </p>
+              <input type="text" title="input filter data " placeholder="filter result ">   
+              </div>
+          </div>
+      </div>
+   </div>  
+
+
+     <div class="requests logInForm LogoutNotification update" id="discription">
+      <div class="overlay"> </div>
+      <div class="popUpFormContent">
+          <div class="close-btn" onclick="active(discription)">&times;</div>
+          <div class="requestBoxContent">
+            <img src="../images/description.png" alt="" height="70px">
+           <p class="desc"> description of <span> course name </span> course </p>
+              <div class="courseDescription">
+                <p> here is the course description </p>
+              </div>
+              </div>
+          </div>
+      </div>
+   </div>  
+
+
+   <div class="requests logInForm LogoutNotification update" id="choiseAltern">
+    <div class="overlay"> </div>
+    <div class="popUpFormContent">
+        <div class="close-btn" onclick="active(choiseAltern)">&times;</div>
+        <div class="requestBoxContent">
+            <p> are you sure you want to select this course as alternative course  </p>
+                        <div style="margin-top: 20px;">
+                <a href="#" class="view_order"> ok</a>
+                <a href="#" class="view_order" onclick="active(choiseAltern)"> cancel</a>
+            </div>
+        </div>
+    </div>
+ </div> 
+
+     
+     <script type="text/javascript" src="../js/index.js"></script> 
+
+</body>
+</html>

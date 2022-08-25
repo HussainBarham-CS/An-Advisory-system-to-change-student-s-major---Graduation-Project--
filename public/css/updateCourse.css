@@ -1,0 +1,116 @@
+.sideNavBar{
+    height: 100%;
+    position: fixed;
+    background-color: #008088;
+}
+.selection{
+    display: block;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.semesterOrComp{
+    padding: 30px;
+    margin-top: 2px;
+}
+.semesterOrComp a{
+    color: white;
+    font-size: 20px;
+    border-bottom: 1px solid white;
+    padding: 12px;
+    transition: 0.5s;
+}
+
+.semesterOrComp a:hover{
+    color: white;
+    font-size: 20px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding: 12px;
+    transition: 0.5s;
+}
+#actionOption{
+    margin-left: 300px;
+}
+#actionOption p{
+    font-size: 26px;
+}
+.updateContent{
+    margin-top: 40px;
+    
+}
+.selectOptionToUpdateCourse{
+    display: flex;
+}
+.choise{
+    padding: 20px;
+    margin: 12px;
+    border-radius: 3px;
+    background-color: rgb(251, 251, 251);
+    box-shadow: 0 8px 12px 5px rgb(0 0 0 / 7%);
+    text-align: center;
+}
+.choise a{
+    text-decoration: none;
+    color: black;
+}
+#add{
+    background-color: #008088;
+    text-align: center;
+}
+#add a{
+    color :white;
+    padding: 4px;
+}
+.tableSelction{
+    padding: 20px;
+    margin-top: 30pxs;
+}
+#updateFromTable{
+    margin: 0px;
+    padding: 20px;
+}
+#updateFromTable p{
+    font-size: 18px;
+}
+#tableType{
+    padding-left: 12px;
+    color: red;
+}
+#updateTableContent{
+    margin: 0px;
+    padding: 20px;
+    margin-top: 9px;
+}
+#updateTableContentRemove{
+    margin: 0px;
+    padding: 20px;
+    margin-top: 9px;     
+}
+#semester td{
+    font-size: 16px;
+    padding: 14px;
+}
+#semester th{
+    padding: 14px;
+}
+#updateTableContentRemove{
+    display: none;
+}
+a{
+    cursor: pointer;
+}
+#entryToComplete{
+    display: none;
+}
+#updateTableContent{
+    display: none;
+}
+
+
+
+
+
+
+
+
+

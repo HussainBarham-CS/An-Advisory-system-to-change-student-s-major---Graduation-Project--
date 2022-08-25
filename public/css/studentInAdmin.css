@@ -1,0 +1,62 @@
+
+body{
+    background-color: #f4f4f4;
+}
+.orderContent{
+    box-shadow: 0 8px 14px 3px rgb(0 0 0 / 5%);
+    width: 50%;
+    margin: auto;
+    background-color: white;
+    transform: translate(-50%,-50%) scale(1);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    height: 80vh;
+    border-bottom: 4px solid #008088;
+    padding: 20px;
+    justify-content: space-around;
+}
+.topHeader p {
+    padding: 20px;
+    font-size: 22px;
+}
+.topHeader{
+    border-bottom: 1px solid #008088;
+}
+.studentInfo{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+
+}
+.studentInfo p{
+    font-size: 17px;
+    padding: 12px;
+}
+.studentInfo span{
+    color: #008088;
+}
+#complete_course{
+    width: 100%;
+    margin: 0px;
+    box-shadow: none;
+    margin-top: 60px;
+}
+#table-cointer{
+    margin-top: 100px;
+}
+.pcontent{
+    display: block;
+}
+.pcontent p{
+    text-align: center;
+}
+.result {
+     color: #008088;   
+}
+.pcontent .result {
+    font-size: 18px;
+}
+

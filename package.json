@@ -1,0 +1,28 @@
+{
+  "name": "fproject",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-passport-logout": "^0.1.0",
+    "express-session": "^1.17.3",
+    "hbs": "~4.0.4",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.16",
+    "passport": "^0.5.3",
+    "passport-http": "^0.3.0",
+    "path": "^0.12.7",
+    "pg": "^8.7.3",
+    "python-shell": "^3.0.1",
+    "ramda": "^0.28.0",
+    "request-promise": "^4.2.6",
+    "util": "^0.12.4",
+    "xlsx": "^0.18.5"
+  }
+}

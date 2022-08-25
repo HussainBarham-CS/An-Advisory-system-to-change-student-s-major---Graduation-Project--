@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://fonts.googleapis.com/css?family=Poppins:300,900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../css/Register.css">
+  <link rel="stylesheet" href="../css/main.css">
+
+
+
+
+    <title>register</title>
+</head>
+<body>
+    <div class="main">
+      <div class="RegisterForm">
+      <div class="rigthsideRegisterForm"> 
+        <div class="RegisterFormContent">
+          <p style="font-size: 50px;"> Register</p>
+          <span style="color: rgb(174, 174, 174);"> register form to create new account </span>
+          <div class="form">
+            <form action="/register2" method="post">
+              
+              <div>
+                <input type="text" placeholder="First name" name="fname" required>
+                <input type="text" placeholder="Last name" name="lname" required>
+              </div>
+
+              <div>
+                <input type="text" placeholder="university number" maxlength="8" name="idS" required>
+                <input type="text" placeholder=" GBA" name="gba" required maxlength="4">
+              </div>
+
+              <div>
+                <input type="email" placeholder="Email" name="emailS" required>
+                <input type="tel" placeholder="phone number" name="phone"  required>              </div>
+
+              <div>
+                <input type="password" id="password" name="pass" placeholder="passward" required >
+                <input type="password" id="repeat"   placeholder="repeat passward" required >
+                <p  id="NotsamePass"> Not the same </p>
+                <p  id="samePass"> accept </p>
+              </div>
+
+              <div class="select">
+                <select id="college" name="coll">
+                    <option value="0" disabled selected> please select a college name</option>
+                  {{# each ob}} 
+                  <option value="{{this}}" > {{this}}</option>
+                  {{/ each}}
+                </select>
+
+                <select id="college" name="maj">
+                  <option value="1" disabled selected> please select major </option>
+                  {{# each programs}} 
+                  <option value="{{this}}"> {{this}} </option>
+                  {{/ each}}
+                </select>
+              </div>
+
+              <div>
+                <input type="number" id="year" placeholder="academic year" name="acaY" required  min="0" max="5">
+                <input type="number" id="complete" placeholder="completed hours " name="comH" required >
+              </div>
+              <div class="regist">
+                <button style="padding:20px; margin-top: 10px" type="submit" onclick="checkEmpty()"> Next</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="backRegisterForm"> 
+        <p> ANNU Register </p>
+      </div>
+    </div>
+    </div>
+
+      
+    <script type="text/javascript" src="../js/index.js"></script>
+
+    
+</body>
+</html>

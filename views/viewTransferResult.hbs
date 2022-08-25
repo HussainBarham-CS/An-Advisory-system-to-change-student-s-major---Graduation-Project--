@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/vireAlternativeRes.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <link rel="stylesheet" href="../css/AdminDhash.css">
+    <title>result</title>
+</head>
+<body>
+    <header id="header" style="justify-content: space-between;">
+        <div class="logo">
+             <img src="../images/Logo.jpg" height="80px">
+         </div> 
+         <div class="profileName" style="margin-left:68% ;">
+                <p> {{name}}  </p>
+                <span> {{program}}  </span> 
+            </div> 
+             <div class="profile" onclick="active(menu)">
+                <img  src="../images/user.png" style="background-color:#008088 ;"> 
+            </div> 
+      </header>
+
+      <div class="actionOption">
+            <div class="infoContent" style="display: flex; margin-left:40%;margin-top:1%;"> 
+
+              <form action="/userDhash" method="get" id="11">
+                    <a onclick="document.getElementById('11').submit();" class="menu_content"> home </a>
+                </form> 
+
+                <form action="/userDhash" method="get" id="12">
+                    <a onclick="document.getElementById('12').submit();" class="menu_content"> what to do </a>
+                </form> 
+
+                <form action="/order" method="get" id="13">
+                    <a onclick="document.getElementById('13').submit();" class="menu_content"> order </a>
+                </form> 
+                
+                <form action="/courses" method="post" id="14">
+                    <a onclick="document.getElementById('14').submit();" class="menu_content"> courses </a>
+                </form>    
+                
+  
+
+            </div>
+        </div>
+
+
+    <div class="main" style="margin-top: -5%;">
+        <div class="viewResult">
+            <p> result </p>
+            <div class="viewStatics">
+                <div>
+                    <p> transfer survey</p>
+                </div>
+                <div class="viewStaticBody">
+                    <div class="box"> 
+                        <p class="number"> Calculated course </p>
+                        <p>{{numb}}</p>
+                        
+                        
+                    </div>
+                    <div class="box">
+                        <p class="number"> Required hours</p>
+                        
+                        <p>{{calc.[0]}}</p>
+                    </div>
+                    <div class="box">
+                        <p class="number"> Calculated hours</p>
+                        <p > {{hours}} </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="result viewResult">
+        <form action="/trans" method="get">
+        <p class="Table_header"> calculated course <br> 
+            <span class="description"> This table contains the calculated courses before transfer operation</span> 
+          </p>
+
+            <div class="table-cointer"> 
+              <table class="table" id="completed"> 
+                  <thead>
+                      <tr> 
+                          <th>Course name  </th>                     
+                          <th>Course Code </th>
+                          <th>Credit Hours </th>
+                          <th>Course catagory </th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      {{# each data}}
+                <tr> 
+                  <td > {{this.[1]}} </td> 
+                    <td>{{this.[0]}}</td> 
+                    <td> {{this.[3]}}</td> 
+                    <td>{{this.[4]}} </td> 
+                  </tr>
+                  {{/ each}}
+                
+            </tbody>
+            </table>
+            
+          </div>
+          <div class="regist">
+                <button style="padding:20px; margin-top: 20px ; margin-left :46% ; background:#008088;color:aliceblue" type="submit" > ok Transfer</button>
+              </div>
+              </form>
+          
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+#container{
+    background: none;
+    border-bottom: 1px solid rgb(174, 174, 174);
+    width: 80%;
+    margin: auto;
+    margin-top: 70px;
+}
+form{
+    display: flex;
+}
+.selectBox{
+    display: flex;
+    margin: auto;
+    width: fit-content;
+}
+.transferContent{
+    text-align: center;
+    font-size: 20px;
+}
+.select-dropdown{
+    margin-top: 12px;
+    margin: 12px;
+}
+select{
+    padding: 12px;
+    margin: 5px;
+    width: 320px;
+    background-color: #008088;
+    color:white;
+}
+.btn{
+    height: 80%;
+    padding-left:15px ;
+    padding-right:15px ;
+    cursor: pointer;
+}
+.choises{
+    margin-top: 100px;
+}
+
+.resultInformation{
+    background-color: #008088;
+    margin: 20px;
+}
+
+.resultInformation p{
+    color: white;
+    padding: 20px;
+    
+}
+.resultInformation{
+    justify-content: space-between;
+    display: flex;
+}
+.transferButton{
+    align-self:center;
+}
+.transferBox{
+    width: 80%;
+    margin: auto;
+}
+.transferBtn{
+    width: fit-content;
+    margin: auto;
+    padding: 20px;
+    
+}
+.transferBtn button{
+    padding: 12px;
+    
+}
+a{
+    text-decoration: none;
+}
+#transfer .popUpFormContent{
+    width: 550px;
+}
+#transfer  .close-btn{
+    left: 500px;
+}
+
+.tableContent{
+    display: none;
+}

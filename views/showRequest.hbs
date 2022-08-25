@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>request</title>
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/AdminDhash.css" rel="stylesheet">
+    <link
+    href="https://fonts.googleapis.com/css?family=Poppins:300,900&display=swap"
+    rel="stylesheet"
+  />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="main">
+<div class="sideNavBar" id="sideNavBar">
+            <div class="sideNavBarContent">
+                <ul>
+                    <li>
+                        <form action="/Request" method="get" id="1">
+                            <a onclick="document.getElementById('1').submit();" class="fa fa-cloud">&nbsp reguests pending</a>
+                        </form>
+                    </li> 
+                    <li>
+                        <form action="/Stu" method="get" id="2">
+                            <a onclick="document.getElementById('2').submit();" class="fa fa-users" >&nbsp students</a>
+                        </form>
+                    </li> 
+                    <li>
+                        <form action="/logout" method="get" id="3">
+                            <a onclick="document.getElementById('3').submit();"  class="fa fa-sign-out">&nbsp Log out</a>
+                        </form>  
+                    </li> 
+                </ul>
+        </div> 
+        </div>
+        <header id="header">
+            <div class="logo">
+                <img src="../images/Logo.jpg" height="80px">
+             </div> 
+             <div style="display: flex;" class="profileBox">
+                <div class="message profileName" onclick="active(sideNavBar)">
+                    <img  src="../images/menu-button-of-three-horizontal-lines.png" height="25px"> 
+                </div> 
+
+                <div class="profileName">
+                <p> {{name}}  </p>
+                <span> {{job}}  </span> 
+            </div> 
+             <div class="profile" onclick="active(menu)">
+                <img  src="../images/AnajahBack.jpg"> 
+            </div>
+            <div class="action" > 
+                <div class="menu" id="menu"> 
+                  <h3> mojahed khursani</h3>
+                  <uL>
+                    <li> <img src="../images/user (1).png"><a href="#"  > my profile</a>  </li> 
+                    <li> <img src="../images/write.png"><a href="#" > Edit profile </a>  </li> 
+                    <li> <img src="../images/inbox.png"><a href="#" > inbox</a>  </li> 
+                    <li> <img src="../images/question.png"><a href="#" > help</a>  </li> 
+                    <li> <img src="../images/log-out.png"><a href="#" onclick="active(LogoutNotification),active(menu)"> log out</a>  </li> 
+                  </uL> 
+                </div>
+             </div>
+        </div>
+          </header>
+          <div class="container">
+              <div class="card">
+                  <p> Admin Dhash Board </p>
+                  <span style="color: #ccc; font-size: 15px;"> computer science department </span>
+              </div>
+          </div>
+          
+          <div class="tableContent ">
+            <div style="display: flex ; justify-content: space-between;"> 
+            <div> 
+            <p style="padding-bottom: 20px;"> There are <span style="color: #008088;"> _ </span> requests waiting for an answer </p> 
+        </div>
+            <div class="searchBox">
+                <form>
+                    <input type="text" placeholder="search for a student " id="search" onkeyup="myFunction(Table2  )">
+                </form>
+            </div> 
+        </div>
+                <table id="Table2">
+                      <tr>
+                        <th>student id </th>
+                        <th>student name</th>
+                        <th>major</th>
+                        <th>request type</th>
+                        <th>request</th>
+                      </tr>
+                  
+                      <tr>
+                        <td><a href="../views/Students.html" >11823040</a></td>
+                        <td>mojahed khursani </td>
+                        <td>compter science</td>
+                        <td>
+                            <a href="#">change major</a> 
+                        </td>
+                        <td >
+                            <a class="view_order accept" onclick="active(success)"> accept</a> 
+                            <a class="view_order decline"> decline</a> 
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="../views/Students.html">11823040</a></td>
+                        <td>mojahed khursani </td>
+                        <td>compter science</td>
+                        <td>
+                            <a href="#">Alternative Materials</a> 
+                        </td>
+                        <td >
+                            <a class="view_order accept" onclick="active(success)"> accept</a> 
+                            <a class="view_order decline"> decline</a> 
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="../views/Students.html">11823040</a></td>
+                        <td>ahmad khursani </td>
+                        <td>managment information system</td>
+                        <td>
+                             <a href="#">Alternative Materials</a> 
+                        </td>
+                        <td >
+                            <a class="view_order accept" onclick="active(success)"> accept</a> 
+                            <a class="view_order decline"> decline</a> 
+                        </td>
+                      </tr>
+                  </table>
+              </div>
+        </div>
+    </div>
+
+    <div class="success logInForm LogoutNotification" id="success">
+        <div class="popUpFormContent">
+            <div>
+                <img src="../images/bell.png" height="20px">
+                <p> accept request </p>
+                <a style="color: white; cursor: pointer;" onclick="active(success)"> ok</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            @2022 copyright :
+            <a class="text-white" href="#">ANNU Register.com</a> 
+             </div>
+    </footer>
+
+    <script type="text/javascript" src="../js/index.js"></script>
+</body>
+</html>

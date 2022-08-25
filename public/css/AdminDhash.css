@@ -1,0 +1,347 @@
+.profile{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+   .profile img{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+.profileName{
+    text-align: center;
+    margin-bottom: 12px;
+    margin-top: 5px;
+    margin-right: 8px;
+}
+.profileName span{
+    font-size: 12px;
+    color: #ccc;
+}
+.container{
+    padding: 6rem 0;
+    background: linear-gradient(90deg,#1c1f22 0%,#434a4f 50%,
+    #008088 100%);
+    height: 6.5vh;
+}
+.card{
+    color: white;
+    margin: 60px;
+    font-size: 25px;
+}
+.card p{
+    font-weight: bold;
+}
+.Numbers{
+    display: flex;
+    padding: 20px;
+}
+.NumberContent{
+    margin: auto;
+    width: 31%;
+    height: 20vh;
+    padding: 20px;
+    box-shadow: 0 0 6px rgba(0,0,0,.1)!important;
+}
+.NumberContent1{
+    background-color: #60e2eb;
+    transition: 0.5s;
+}
+.NumberContent:hover{
+    transition: 0.5s;
+    background-color: #41ccd5;
+}
+.NumberContent2{
+    transition: 0.5s;
+    background-color: #3ab4bc;
+}
+.NumberContent3{
+    transition: 0.5s;
+    background-color: #008088;
+}
+.NumberContent p{
+color: white;
+font-size: 22px;
+}
+.cardContent{
+    display: flex;
+    justify-content: space-between;
+}
+.number{
+    text-align: center;
+}
+.number p{
+    color: #1c1f22;
+    font-size: 60px;
+}
+.tableCointer{
+box-shadow: 0 0 6px rgba(0,0,0,.1)!important;
+height: fit-content;
+}
+.searchFromTable{
+    padding: 12px;
+    justify-content: space-between;
+    display: flex;
+    margin-top: 100px;
+    background-color: #008088;
+}
+.searchBox input{
+    margin: 0px;
+    width: 40vh;
+    border: 1px solid #008088;
+    border-radius: 4px;
+}
+.tableContent{
+    padding: 20px;
+    margin-top: 15px;
+    height:50vh;
+    overflow-y: scroll;
+}
+table {
+    border-collapse: collapse;
+    text-align: left;
+    overflow: hidden;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+}  
+th {
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 0.7rem;
+    font-weight: 900;
+    background-color: rgb(241, 241, 241);
+  }
+  td {
+    padding: 1rem 2rem;
+  }
+tr{
+    border-bottom: 1px solid #ccc;
+}
+  tr:hover{
+    background-color: rgb(241, 241, 241);
+      cursor: pointer;
+  }
+  footer{
+      margin-top: 12px;
+  }
+  .view_order{
+      background-color: #008088;
+      padding: 12px;
+      color: white;
+      box-shadow: 0 3px 20px rgb(0 0 0 / 20%);
+      border-radius: 2px;
+      cursor: pointer;
+  }
+  .message{
+      margin-top: 20px;
+      margin-right: 30px;
+      cursor: pointer;
+  }
+  .notifNumber{
+      background-color: red;
+      padding: 3px;
+      border-radius: 6px;
+      color: white;
+  }
+
+  .sideNavBar .sideNavBarContent{
+     position: fixed;
+     height: 100%; 
+     background-color: #1c1f22;
+     padding: 20px;
+     padding: 8rem 0;
+  }
+
+  .sideNavBarContent ul a{
+      display: none;
+      height: 100%;
+      width: 100%;
+      color: white;
+      text-decoration: none;
+      padding: 20px;
+      font-size: 18px;
+      transition:all 0.5s;
+      cursor: pointer;
+  }
+  .sideNavBarContent ul li{
+   list-style: none;
+}
+.sideNavBarContent ul a:hover{
+    margin-left: 12px;
+}
+.sideNavBarContent ul li:hover{
+    background-color: #434a4f;
+}
+.sideNavBar.active .sideNavBarContent{
+    width: 250px;
+}
+  
+.sideNavBar.active .sideNavBarContent ul a{
+    display: block;
+}
+ #action .menu{
+    right: 295px;
+}
+#action .menu ul{
+    height: 220px;
+}
+.action .menu{
+    position: absolute;
+    position: fixed;
+    top:110px;
+    right: 48px;
+    padding: 10px 20px;
+    background: #fff;
+    width: 200px;
+    box-sizing: 0 5px 25px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1000;
+    box-shadow: 0 
+    -2px 4px rgb(0 0 0 / 8%), 
+    0 -4px 12px rgb(0 0 0 / 8%);
+  }
+  .action .menu h3{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+  padding: 20px 0;
+  font-weight: 500;
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.2rem;
+  }
+
+  .action .menu ul li {
+    list-style: none;
+    padding: 10px 0 ;
+    border-top:1px solid rgba(0, 0, 0, 0.05);
+    display:flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .action .menu ul li img{
+  
+  max-width: 20px;
+  margin-right: 20px;
+  opacity: 0.5;
+  transition: 0.5s;
+  }
+  .action .menu ul li a{
+  display: inline-block;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: 0.5s;
+  }
+  
+  .action .menu.active{
+    visibility: visible;
+    opacity: 1;
+  }
+  .action .menu::before{
+    content: ' ';
+    position: absolute;
+    top: -5px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    transform: rotate(45deg);
+  }
+  .action .menu a:hover{
+    color:#008088;
+    margin-left: 7px;
+    }
+.LogoutNotification .overlay{
+    background-color: rgba(12, 13, 15, 0.5);
+    background-image: none;
+}
+
+.LogoutNotification .popUpFormContent{
+    height: fit-content;
+    text-align: center;
+}
+.list ul{
+    justify-content: center;
+}
+.alert{
+    color: red;
+}
+.message-box{
+    padding: 12px;
+}
+.registerNumber{
+    font-size: 13px;
+    color: #ccc;
+}
+.MessageContent{
+    height: 12px;
+    width: 100%;
+    font-size: 13px;
+}
+#gotoinbox{
+    text-align: center;
+    font-size: 13px;
+}
+#gotoinbox:hover{
+margin: 0px;
+}
+.accept{
+    background-color: green;
+}
+.decline{
+    background-color: red;
+}
+.requests .popUpFormContent{
+    width: 750px;
+}
+.requestBoxContent{
+    padding: 20px;
+}
+.requestBoxContent .tableContent{
+overflow: hidden;
+height: fit-content;
+}
+.requests .close-btn{
+    left: 700px;
+}
+
+.firstD{
+color: rgb(175, 174, 174);
+}
+
+.success .popUpFormContent{
+    top:90%;
+    left: 88%;
+    background-color: rgb(65, 197, 129);
+    width: 250px;
+    padding: 12px;
+    border-radius: 4px;
+}
+#list ul li a{
+    padding: 10px;
+    
+}
+.id{
+    color: #05666d;
+}
+
+@media only screen and (max-width: 750px) {
+.searchFromTable{
+display: block;
+}
+.logo{
+    display: none;
+}
+}

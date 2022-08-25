@@ -1,0 +1,32 @@
+.studentCard{
+    background-color:#f4f4f4 ;
+    padding: 20px;
+    margin: 12px;
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 12px;
+    border-bottom: 2px solid #008088;
+    justify-content: space-around;
+}
+.name{
+    color: #008088;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.studentCard:hover{
+    background-color:#e3e3e3 ;
+}
+.mainInformation{
+margin: 20px;
+}
+.major{
+    font-size: 13px;
+}
+.oneItem{
+    display: flex;
+}
+a{
+    text-decoration: none;
+}

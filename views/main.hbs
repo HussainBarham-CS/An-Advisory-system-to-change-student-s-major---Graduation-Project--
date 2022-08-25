@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/main.css" rel="stylesheet" >
+    <link rel="stylesheet" href="../css/AdminDhash.css">
+    <link href="//fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet" type="text/css">
+
+    
+    <title>main page</title>
+</head>
+<body >
+    <div class="main">  
+
+        <header id="header">
+            <div class="logo">
+                <img src="../images/Logo.jpg" height="80px">
+             </div> 
+            <div class="list">
+                <form action="/register" method="get" id="5">
+                <ul>
+                    <li> <a  onclick="active()" > login</a> </li> </form>
+                    <li> <a onclick="document.getElementById('5').submit();"  >join</a></li>
+                </ul>  
+                </form>
+            </div> 
+          </header>
+
+    <div class="back"> 
+        <div class="head">
+            <p class="inline_paragraph">AN Advisor System to change Students Major</p> 
+            <p>هذا الموقع تابع لجامعة النجاح الوطنية ولن يستطيع الاستفادة منه الا طلاب الجامعة</p> 
+        </div> 
+    </div>
+
+    <div class="content">
+        <div class="about head"> 
+            <p id="p1">about us </p> 
+            <p style="color: rgb(174, 174, 174);"> Graduation project with the aim of assisting the student in the following matters            </p>
+            <div class="about_content">
+                <div class="about_content_info"> 
+                    <div class="img head"> <img src="../images/data-transfer (1).png" height="30px"> </div> 
+                    <p class="about_title"> Transfer from one major to another</p>
+                    <p> This process aims to assist the student in transferring to another major</p>
+                </div>
+
+                <div class="about_content_info"> 
+                    <div class="img head"> <img src="../images/online-education.png" height="30px"> </div> 
+                    <p class="about_title"> Request a replacement material</p>
+                    <p> This process aims to assist the student in transferring to another major</p>
+                </div>
+
+                <div class="about_content_info"> 
+                    <div class="img head"> <img src="../images/suggestion.png" height="30px"> </div> 
+                    <p class="about_title"> Suggestion for a suitable major </p>
+                    <p> This process aims to assist the student in transferring to another major</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+  <footer>
+        <div class="footer">
+            @2022 copyright :
+            <a class="text-white" href="#">ANNU Register.com</a> 
+             </div>
+    </footer>
+
+    <div class="logInForm" id="logInForm">
+        <div class="overlay"> </div>
+        <div class="popUpFormContent">
+            <div class="close-btn" onclick="active()">&times;</div>
+            <div class="logIn_head"> 
+                <p class="loginP"> log in form </p>
+                <p style="color: rgb(174, 174, 174);font-size: 18px;"> Please log in with your university id
+                </p> 
+            </div>
+            <div class="input">
+                <form action="/user" method="post">
+                    <div>
+                        <input type="text" maxlength="8" placeholder="ID" name="id"> 
+                        <input type="password"  placeholder=" PASSWARD" name="pas"> 
+                    </div>
+                    
+                    <div class="submit">
+                        <button class="view_order" type="submit">log in</button>
+                    </div>
+                 
+                </form>
+                <form action="/register" method="post" id="4">
+                    <div class="submit">
+                    <p> if you still not log in <span onclick="document.getElementById('4').submit();"> register now</span></p>
+                    
+                </div>
+                </form>
+                
+            </div> 
+
+
+
+            
+
+
+
+        </div> 
+    </div> 
+    
+
+
+
+</body>
+<script>
+    function active(){
+        document.getElementById('logInForm').classList.toggle('active');
+    }
+    history.pushState(null,null,location.href);
+        window.onpopstate = function(){
+            history.go(1)
+        }
+    
+        
+    
+ </script>
+
+</html>

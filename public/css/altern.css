@@ -1,0 +1,191 @@
+.alternInfo{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 22px;
+}
+#altern{
+    margin-top: 12px;
+    margin-bottom: 30px;
+}
+#actionOption{
+    height: fit-content;
+}
+#desc{
+    margin: 0px;
+    padding: 0px;
+}
+.bestRes{
+    font-size: 18px;
+    padding: 20px;
+}
+.dis{
+    color: red;
+}
+.options{
+    display: flex;
+    padding: 12px;
+    justify-content: space-around;
+}
+.select select{
+    width: 40vh;
+    background-color:#f4f4f4;
+    height: 6vh;
+}
+.select label{
+    padding: 12px;
+}
+.bestResult {
+     border-bottom: 12px solid #008088;
+}
+.allResult{
+    display: grid;
+    gap: 50px 100px;
+    grid-template-columns: auto auto auto;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 12px;
+    padding: 20px;
+}
+.resultCard{
+    background-color: #f4f4f4;
+    width: 130%;
+    height: fit-content;
+    text-align: center;
+    border-bottom: 3px solid #008088;    
+}
+.resultCard:hover{
+    box-shadow: 0 12px 20px 9px rgb(0 0 0 / 7%);
+}
+.courseName{
+    font-size: 22px;
+    color:#008088;
+    font-weight: bold;
+}
+.topContent{
+    height: 50%;
+    background-color: #008088;
+}
+.topContent p{
+    font-size: 45px;
+    text-align: center;
+    padding: 30px 0px;
+    color: white;
+    text-shadow: black;
+}
+.downContent{
+    text-align: left;
+    padding: 12px;
+}
+.collegeAndMajor{
+    color: rgb(160, 160, 160);
+    font-size: 12px;
+}
+.college{
+font-size: 14px;
+}
+.frontface{
+    position:absolute;
+    height: 240px;
+    width: 295px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.selectFromfront{
+    padding: 50px 0px;
+    margin-top: 50px;
+}
+.resultCard:hover .frontface{
+    display: block;
+    overflow: hidden;
+}
+.resultCard:hover{
+    overflow: hidden;
+}
+.courseCode{
+    display: none;
+}
+#discription .overlay{
+    background: linear-gradient(90deg,#008088 0%,#01a3af 50%,
+    #01b1be 100%);
+}
+.select button{
+    height: 6vh;
+    width: 7vh;
+    background-color: #01a3af;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.courseDescription{
+    margin-top: 20px;
+}
+.requestBoxContent span{
+    color: #008088;
+}
+.desc{
+    border-bottom: 1px solid #008088;
+    padding: 12px;
+}
+.btn{
+   text-align: left;
+   padding: 12px;
+}
+.btn button{
+padding: 10px;
+border: none;
+background-color: #008088;
+color: white;
+cursor: pointer;
+}
+.courseName {
+color: #008088;
+font-size: 14px;
+background-color: #f6f6f6;
+}
+.alterCourseSelected .courseName{
+background-color: #16c677;
+
+color: white;
+}
+.alterCourseSelected td{
+    background-color: rgb(187, 231, 211);
+    color: white;
+    color: black;
+    }
+.imgTd img{
+    margin-left: 16px;
+}
+#alternHeader{
+    margin-top: 17px;
+    display: flex;
+    justify-content: space-around;
+}
+#alternHeader p{
+    padding: 12px;
+    font-size: 17px;
+}
+
+.alternHeaderContent .graduateOrNot {
+    background-color: rgb(22, 198, 119);
+    color: white;
+    border-radius: 6px;
+    text-align: center;
+}
+
+#bestResult{
+    margin-top: 12px;
+}
+
+#resultHeader p{
+    padding: 12px;
+    text-align: center;
+}
+
+.ansAques{
+    text-align: center;
+    color: #008088;
+    font-size: 19px;
+}
+
+
+

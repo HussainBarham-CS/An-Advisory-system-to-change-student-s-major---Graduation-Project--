@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student</title>
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/AdminDhash.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/student.css">
+    <link rel="stylesheet" href="../css/Register.css">
+
+    <link
+    href="https://fonts.googleapis.com/css?family=Poppins:300,900&display=swap"
+    rel="stylesheet"
+  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+        <div class="sideNavBar" id="sideNavBar">
+            <div class="sideNavBarContent">
+                <ul>
+                    <li>
+                        <form action="/Request" method="get" id="1">
+                            <a onclick="document.getElementById('1').submit();" class="fa fa-cloud">&nbsp reguests pending</a>
+                        </form>
+                    </li> 
+                    <li>
+                        <form action="/Stu" method="get" id="2">
+                            <a onclick="document.getElementById('2').submit();" class="fa fa-users" >&nbsp students</a>
+                        </form>
+                    </li> 
+                    <li>
+                        <form action="/logout" method="get" id="3">
+                            <a onclick="document.getElementById('3').submit();"  class="fa fa-sign-out">&nbsp Log out</a>
+                        </form>  
+                    </li> 
+                </ul>
+        </div> 
+        </div>
+        
+    <div class="main">
+   
+        <header id="header">
+            <div class="logo">
+                <img src="../images/Logo.jpg" height="80px">
+             </div> 
+             <div style="display: flex;" class="profileBox">
+                <div class="message profileName" onclick="active(sideNavBar)">
+                    <img  src="../images/menu-button-of-three-horizontal-lines.png" height="25px"> 
+                </div> 
+
+                <div class="profileName">
+                <p> {{name}}  </p>
+                <span> {{job}}  </span> 
+            </div> 
+             <div class="profile" onclick="active(menu)">
+                <img  src="../images/AnajahBack.jpg"> 
+            </div>
+            <div class="action" > 
+                <div class="menu" id="menu"> 
+                  <h3> mojahed khursani</h3>
+                  <uL>
+                    <li> <img src="../images/user (1).png"><a href="#"  > my profile</a>  </li> 
+                    <li> <img src="../images/write.png"><a href="#" > Edit profile </a>  </li> 
+                    <li> <img src="../images/inbox.png"><a href="#" > inbox</a>  </li> 
+                    <li> <img src="../images/question.png"><a href="#" > help</a>  </li> 
+                    <li> <img src="../images/log-out.png"><a href="#" onclick="active(LogoutNotification),active(menu)"> log out</a>  </li> 
+                  </uL> 
+                </div>
+             </div>
+        </div>
+          </header>
+          <div class="container">
+              <div class="card">
+                  <p> Admin Dhash Board </p>
+                  <span style="color: #ccc; font-size: 15px;"> {{job}} </span>
+              </div>
+          </div>
+          
+
+    
+            <div class="tableContent ">
+                <div style="display: flex ; justify-content: space-between;"> 
+                <div> 
+                <p style="padding-bottom: 20px;"> there are <span style="color: #008088;"> _ </span> student in your system </p> 
+            </div>
+
+             <div class="searchBox">
+                    <form>
+                        <input  type="text" placeholder="search for a student " id="search" onkeyup="searchTable()">
+                    </form>
+                </div>
+                
+            </div>
+            
+            
+            {{# each omar}}
+            
+            
+<div class="studentShow"  id="myTable">
+<form action="/stuInfo" method="post" id="7">
+<div class="studentCard omar"  >
+
+    <div class="oneItem"> 
+
+
+<div class="img">
+    <div class="profile">
+        <img  src="../images/user.png" height=""> 
+    </div>
+</div>
+<div class="mainInformation">
+     
+        <div>
+            <p class="name" name="stName">{{this.[1]}} </p>
+            <p class="major" name="stMajor"> </p>
+        </div>
+
+<div class="universityNum">
+    <p name="idd">{{this.[0]}}</p>
+ </div>
+</div>
+</div>
+<div class="contactInformation mainInformation">
+    <p name="stMobile"> {{this.[5]}} </p>
+    <p name="stEmail"> {{this.[2]}}</p>
+</div>
+
+<div class="showInformation mainInformation">
+    
+
+<button class="hussein view_order" type="submit" value="{{this.[0]}}" name="id"  id="iddddddd">show</button>
+
+
+
+</div>
+
+</div>
+</form>
+</div>
+<script>
+function searchTable() {
+    
+    var input, filter, found, table, tr, td, i, j;
+    input = document.getElementById("search");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    var x = document.getElementsByClassName("omar")
+    id = document.getElementById("iddddddd").value;
+    var h = document.getElementsByClassName("hussein")
+    //tr = table.getElementBy("h");
+    
+for(var i=0;i<h.length;i++)
+    {
+        if(input.value==h[i].value)
+        {
+            x[i].style.display = "flex"
+        }
+        
+        else{
+            
+            x[i].style.display = "none"
+               
+            
+        }
+    }
+    
+    
+
+        
+    if(input.value=="")
+    {
+        for(var i=0;i<h.length;i++)
+        x[i].style.display = "flex"
+    }
+    
+    
+    
+        
+    
+}
+</script>
+    
+
+{{/ each}}
+
+              </div>
+        </div>    
+    
+    <footer>
+        <div class="footer">
+            @2022 copyright :
+            <a class="text-white" href="#">ANNU Register.com</a> 
+             </div>
+    </footer>
+
+    <script type="text/javascript" src="../js/index.js"></script>
+    
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register2</title>
+    <link rel="stylesheet" href="../cssmain.css">
+    <link rel="stylesheet" href="../css/register2.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <link rel="stylesheet" href="../css/AdminDhash.css">
+    <link
+    href="https://fonts.googleapis.com/css?family=Poppins:300,900&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body id="body">
+    <header id="header" style="justify-content: space-between;">
+        <div class="logo">
+            <img src="../images/Logo.jpg" height="80px">
+         </div> 
+        </header>
+
+    <div class="main" id="main">
+
+        <div class="manualInsertData manualInsert">
+            <div>     
+           <p> Please select the course you completed at the university </p>
+            </div>
+
+            <div class="courseTable">
+            <div class="mainInformation">
+                <p> completed hours :<span> {{student_compleat}}</span> </p>
+                <p> major  :<span> {{student_maj}} </span> </p>
+                <p> college : <span> {{student_coll}} </span> </p>
+            </div>
+            <div class="table-cointer" id="table-cointer"> 
+                <table class="table" id="completed" > 
+                    <thead > 
+                        <tr class="thead"> 
+                            <th>Course name  </th>                     
+                            <th>Course Code </th>
+                            <th>Credit Hours </th>
+                            <th>Course catagory </th>
+                            <th>  select </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <form action="/simester" method="post">
+
+                        {{# each data}}
+                  <tr> 
+                    <td > {{this.[1]}} </td> 
+                      <td>{{this.[0]}}</td> 
+                      <td> {{this.[3]}}</td> 
+                      <td>{{this.[4]}} </td> 
+                      <td>   <input type="checkbox" name="check" value="{{this.[0]}}" >   </td>
+                </tr>
+                {{/ each}}
+                
+
+              </tbody>
+              </table>
+            </div>
+
+            <div class="insertCompletedData">
+          <div class="btn">
+                <div>
+                    <button type="submit"> Next</button>
+                </div>
+                </form>
+                <div>
+                    <button> unselected all</button>
+                </div>
+            </div>
+            <div class="searchBox">
+                <form>
+                    <input type="text" placeholder="search for a course " id="search" onkeyup="myFunction()">
+                </form>
+            </div> 
+
+            </div>
+
+            </div>
+     
+
+
+        </div>
+
+
+      
+
+   </div>
+<script>
+
+function myFunction() {
+  var input, filter, table, tr, td, i,j, txtValue;
+  input = document.getElementById("search");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("completed");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+  
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+  
+}
+</script>
+</body>
+</html>

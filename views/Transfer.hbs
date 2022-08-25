@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transfer course</title>
+    <script  src="../public/js/functions.js">
+    
+    function hussein(){
+      var x = document.getElementById('colleg')
+      alert(x)
+
+    }
+    
+    </script>
+    <link rel="stylesheet" href="../css/AdminDhash.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/Transfer.css">
+    <link
+    href="https://fonts.googleapis.com/css?family=Poppins:300,900&display=swap"
+    rel="stylesheet"
+  />
+
+    <link rel="stylesheet" href="../css/userDash.css">
+
+
+  
+</head>
+<body>
+    <div class="main">
+        <header id="header" style="justify-content: space-between;">
+            <div class="logo">
+              <img src="../images/Logo.jpg" height="80px">
+             </div>
+                      <div class="profileName" style="margin-left:68% ;">
+                <p> {{name}}  </p>
+                <span> {{program}}  </span> 
+            </div> 
+             <div class="profile" onclick="active(menu)">
+                <img  src="../images/user.png" style="background-color:#008088 ;"> 
+            </div> 
+          </header>
+          
+
+          <div class="actionOption">
+            <div class="infoContent" style="display: flex; margin-left:40%;margin-top:1%;"> 
+
+              <form action="/userDhash" method="get" id="11">
+                    <a onclick="document.getElementById('11').submit();" class="menu_content"> home </a>
+                </form> 
+
+                <form action="/userDhash" method="get" id="12">
+                    <a onclick="document.getElementById('12').submit();" class="menu_content"> what to do </a>
+                </form> 
+
+                <form action="/order" method="get" id="13">
+                    <a onclick="document.getElementById('13').submit();" class="menu_content"> order </a>
+                </form> 
+                
+                <form action="/courses" method="post" id="14">
+                    <a onclick="document.getElementById('14').submit();" class="menu_content"> courses </a>
+                </form>    
+                
+  
+
+            </div>
+        </div>
+
+        
+          <div class="container" id="container">
+              <div class="transferContent"> 
+                  <p > Which major do you want to transfer ?</p>
+                  <p style="color: rgb(193, 192, 192); font-size: 15px;"> First, choose the college, then the major you want   </p>
+<form action="/Transfer" method="post">
+
+                  <div class="selectBox">
+                  <div class="select-dropdown" id="select_college">
+
+                    <select name="coll">
+                      <option id="colleg" disabled selected> choise college </option>
+                        {{# each ob}} 
+                            <option > {{this}}</option>
+                        {{/ each}}
+                    </select>
+                    
+                  </div>
+
+                  <div class="select-dropdown" id="select_major">
+                    <select name="maj">
+                        <option value="Option 1" disabled selected> choise major </option>
+                        {{# each programs}} 
+                            <option > {{this}} </option>
+                        {{/ each}}
+                    </select>
+                    
+                    <button onclick="j(),Active(showResult);hussein()" type="submit" class="btn"> click</button></form>
+                  </div>
+                </div>
+                <div class="choises">
+                    <p id="show"></p>
+                </div>
+              </div>
+              <form action="/TransResult/{{namee}}" method="get">
+       
+              <div class="showResult" id="showResult" style="margin-left: 25%; margin-right:25%">
+                  <div class="resultInformation"> 
+                      <p> major :  <span> {{namee}}</span> </p>
+                      <p> Required hours: <span> {{hours}} </span>  </p>
+                      <p> Acceptance rate : <span> {{rate}}%</span></p>
+                  </div>
+
+                  <div class="transferBox">
+                  <p style="text-align: center ; color: #008088;"> Similar courses will be calculated and given the percentage of similarity</p>  
+                  <div class="transferBtn">
+                  <button class="transferButton" id="transferButton" type="submit"   class="view_order" onclick="active(transfer)"> Similar</button>
+                </div>
+                </div>
+            </div>        
+</form>
+            <div class="tableContent" id="tableContent">
+              <div style="display: flex ; justify-content: space-between;"> 
+              <div> 
+              <p style="padding-bottom: 20px;"> Courses calculated from the transfering process
+              </p> 
+          </div>
+              <div class="searchBox">
+                  <form>
+                      <input type="text" placeholder="search for a course " id="search" onkeyup="myFunction(Table3)">
+                  </form>
+              </div> 
+          </div>
+              <table id="Table3">
+                    <tr>
+                      <th>Course name  </th>                     
+                      <th>Course Code </th>
+                      <th>Credit Hours </th>
+                      <th>Course catagory </th>
+                    </tr>
+                
+                    <tr>
+                      <td>11823040</td>
+                      <td>mojahed khursani </td>
+                      <td>compter science</td>
+                      <td>example@email.com</td>
+                    </tr>
+                    <tr>
+                      <td>11823040</td>
+                      <td>mojahed khursani </td>
+                      <td>compter science</td>
+                      <td>example@email.com</td>
+                    </tr>
+                    <tr>
+                      <td>11823040</td>
+                      <td>mojahed khursani </td>
+                      <td>compter science</td>
+                      <td>example@email.com</td>
+                    </tr>
+                </table>
+            </div>
+      </div>
+  </div>
+    </div>
+
+    <div class="requests logInForm LogoutNotification " id="transfer">
+      <div class="overlay"> </div>
+      <div class="popUpFormContent">
+          <div class="close-btn" onclick="active(transfer)">&times;</div>
+          <div class="requestBoxContent">
+              <p> Are you sure you want to transfer your major</p>
+              <div style="margin-top: 20px;">
+                  <a href="#" class="view_order" onclick="activeTable()"> yes</a>
+                  <a href="#" class="view_order" onclick="active(transfer)"> No</a>
+              </div>
+          </div>
+      </div>
+   </div>
+    
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
+</html>

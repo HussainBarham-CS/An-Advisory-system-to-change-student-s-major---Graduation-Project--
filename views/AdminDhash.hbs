@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin dhasboard</title>
+    <link rel="stylesheet" href="../css/AdminDhash.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/Register.css">
+    
+    <link
+    href="https://fonts.googleapis.com/css?family=Poppins:300,900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+</head>
+<body>
+    
+    <div class="main">
+            <header id="header">
+            <div class="logo">
+                 <img src="../images/Logo.jpg" height="80px">
+             </div> 
+
+             <div style="display: flex;" class="profileBox">
+
+                <div class="message profileName" onclick="active(sideNavBar)">
+                    <img  src="../images/menu-button-of-three-horizontal-lines.png" height="25px"> 
+                </div> 
+
+                <div class="profileName">
+                <p> {{name}}  </p>
+                <span> {{job}}  </span> 
+            </div> 
+             <div class="profile" onclick="active(menu)">
+                <img  src="../images/AnajahBack.jpg"> 
+            </div>
+            <div class="action" > 
+                <div class="menu" id="menu"> 
+                  <h3> mojahed khursani</h3>
+                  <uL>
+                    <li> <img src="../images/user (1).png"><a href="#"  > my profile</a>  </li> 
+                    <li> <img src="../images/write.png"><a href="#" > Edit profile </a>  </li> 
+                    <li> <img src="../images/inbox.png"><a href="#" > inbox</a>  </li> 
+                    <li> <img src="../images/question.png"><a href="#" > help</a>  </li> 
+                    <li> <img src="../images/log-out.png"><a href="#" onclick="active(LogoutNotification),active(menu)"> log out</a>  </li> 
+                  </uL> 
+                </div>
+             </div>
+        </div>
+          </header>
+
+        <div class="sideNavBar" id="sideNavBar">
+            <div class="sideNavBarContent">
+                <ul>
+                    <li>
+                        <form action="/Request" method="get" id="1">
+                            <a onclick="document.getElementById('1').submit();" class="fa fa-cloud">&nbsp reguests pending</a>
+                        </form>
+                    </li> 
+                    <li>
+                        <form action="/Stu" method="get" id="2">
+                            <a onclick="document.getElementById('2').submit();" class="fa fa-users" >&nbsp students</a>
+                        </form>
+                    </li> 
+                    <li>
+                        <form action="/logout" method="get" id="3">
+                            <a onclick="document.getElementById('3').submit();"  class="fa fa-sign-out">&nbsp Log out</a>
+                        </form>  
+                    </li> 
+                </ul>
+        </div> 
+        </div>
+
+
+          <div class="container">
+              <div class="card">
+                  <p> Admin Dhash Board </p>
+                  <span style="color: #ccc; font-size: 15px;"> {{job}} </span>
+              </div>
+          </div>
+          
+          <div class="Numbers">
+              <div class="NumberContent NumberContent1">
+                  <div class="cardContent">
+                  <p> Requests pending </p>
+                  <img src="../images/request.png" height="50px">
+                </div> 
+                <div class="number"> 
+                    <p> 7</p>
+                </div>
+             </div>
+
+             <div class="NumberContent NumberContent2">
+                <div class="cardContent">
+                    <p> number of students    </p>
+                    <img src="../images/student-with-graduation-cap.png" height="50px">
+                </div> 
+                <div class="number"> 
+                    <p> {{numStudent}}</p>
+                </div>
+             </div>
+
+           <div class="NumberContent NumberContent3">
+            <div class="cardContent">
+                <p> Tasks  </p>
+                <img src="../images/clipboard (1).png" height="50px">
+            </div> 
+            <div class="number"> 
+                <p> 5</p>
+            </div>
+         </div>
+          </div>
+          <div class="tableCointer">
+              <div class="searchFromTable"> 
+                  <div>
+                      <p style="font-size: 22px; color: white;">student and the order</p> 
+                  </div>
+                  <div class="searchBox">
+                      <form>
+                          <input type="text" placeholder="search for a student " id="search" onkeyup="myFunction(Table1)">
+                      </form>
+                  </div>    
+              </div>
+
+              <div class="tableContent">
+                <table id="Table1">
+                    
+                      <tr>
+                        <th>student id </th>
+                        <th>student name</th>
+                        <th>major</th>
+                        <th>Status</th>
+                        <th>request</th>
+                      </tr>
+                  {{# each xx}}
+                      <tr>
+                        <td class="id">{{this.[2]}}</td>
+                        <td>{{this.[3]}}</td>
+                        <td>{{this.[0]}}</td>
+                        <td>
+                             <span class="alert">New request</span> 
+                        </td>
+                        <td >
+                            <form action="/reqAdmin/{{this.[2]}}" method="post">
+                            
+                            <button class="view_order" value="{{this.[2]}}" >view</button>
+                            </form>
+                        </td>
+                      </tr>
+                      {{/ each}}
+                      
+                  </table>
+              </div>
+          </div>
+            <footer>
+            <div class="footer">
+                @2022 copyright :
+                <a class="text-white" href="#">&copyANNU Register.com</a> 
+            </div>
+          </footer>
+          </div>
+
+        
+          
+
+    <div class="LogoutNotification logInForm logout" id="LogoutNotification">
+        <div class="overlay"> </div>
+        <div class="popUpFormContent">
+            <div class="close-btn" onclick="active(LogoutNotification)">&times;</div>
+            <div class="notificationContent">
+                <div class="img">
+                    <img src="../images/power-off.png">
+                 </div>
+                 <div class="notificationMessage"> 
+                     <p> Are you sure you want to log out  </p> 
+                 </div>
+                 <div class="list" id="list">
+                    <ul>
+                        <li> <a href="#" > yes</a> </li> 
+                        <li> <a href="#" onclick="active(LogoutNotification)"> cancel</a></li>
+                    </ul>
+                </div> 
+                 </div>
+        </div> 
+    </div> 
+    
+
+
+    <div class="requests logInForm LogoutNotification" id="request">
+        <div class="overlay"> </div>
+        <div class="popUpFormContent">
+            <div class="close-btn" onclick="active(request)">&times;</div>
+            <div class="requestBoxContent">
+                 <p> <strong>request details </strong> </p>
+                 <div class="tableContent">
+                    <table>
+                          <tr >
+                            <td class="firstD">student id</td>
+                            <td>11821021</td>
+                          </tr>
+                          <tr>
+                            <td class="firstD">student email </td>
+                            <td> example@gmail.com</td>
+                          <tr>
+                            <td class="firstD"> student name</td>
+                            <td>first last name </td>
+                          </tr>
+                          <tr>
+                            <td class="firstD">request type</td>
+                            <td> request type </td>
+                          </tr>
+                          <tr>
+                            <td class="firstD">request details</td>
+                            <td> change major from ------ to ------- </td>
+                          </tr>
+                      </table>
+                  </div>
+                  <div>
+                    <a class="view_order accept" onclick="active(request) ,active(success) "> accept</a> 
+                    <a class="view_order decline"> decline</a>  
+                    <a class="view_order" onclick="active(request)"> cancel</a>  
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="success logInForm LogoutNotification" id="success">
+        <div class="popUpFormContent">
+            <div>
+                <img src="../images/bell.png" height="20px">
+                <p> accept request </p>
+                <a style="color: white; cursor: pointer;" onclick="active(success)"> ok</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script>
+        history.pushState(null,null,location.href);
+        window.onpopstate = function(){
+            history.go(1)
+        }
+    </script>
+  
+</html>

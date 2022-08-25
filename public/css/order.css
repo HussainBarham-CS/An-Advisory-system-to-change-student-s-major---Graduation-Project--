@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f4f4;
+}
+#orderContent{
+    width: 85%;
+    border-bottom: 1px solid #008088;
+}
+.FilterOrderResult{
+    display: flex;
+    justify-content: space-around;
+}
+input , select{
+    padding: 12px;
+    border:1px solid #008088;
+    font-size: 15px;
+}
+label{
+    padding: 4px;
+    font-size: 17px;
+}
+.orderCon{
+    margin-top: 12px;
+    height: 12vh;
+}
+#orderHeder2{
+    background-color: #008088;
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    padding: 14px;
+}
+#orderHeder2 p{
+    font-size: 20px;
+    color: white;
+    padding: 8px;
+}
+p{
+    padding: 0px;
+}
+.orderContent{
+    margin: auto;
+}
+.studentCard{
+    display: flex;
+    justify-content: space-between;
+    background-color:#f4f4f4;
+    margin-top: 6px;
+    padding: 12px;
+}
+.studentCard p{
+    padding: 12px;
+    font-size: 15px;
+}
+.date p{
+    background-color:#2398a5;
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+
+
+

@@ -1,0 +1,80 @@
+
+.main{
+    margin-top: 150px;
+    font-size: 22px;
+}
+.manualInsert{
+    margin-top: 70px;
+    display: flex;
+    padding: 20px;
+}
+.insert{
+    padding: 12px;
+    margin-left: 12px;
+}
+.insertFile{
+    border-bottom: 2px solid #008088;
+    padding: 20px;
+}
+.insertFileContent{
+    margin-top: 12px;
+}
+.manualInsertData{
+    display: block;
+}
+.courseTable{
+   padding : 20px;
+   margin-top: 12px;
+}
+.mainInformation{
+    font-size: 18px;
+    justify-content: space-around;
+    display: flex;
+    border : 1px solid black ;
+    padding: 25px;
+    background-color: white;
+}
+#completed{
+    font-size: 18px;
+    padding: 0px;
+}
+#completed tbody td{
+    padding: 4px;
+    text-align: center;
+    font-size: 16px;
+}
+#completed  th{
+    padding: 12px;
+    text-align: center;
+}
+.checkbox input{
+    background-color: #008088;
+
+}
+.table-cointer{
+    margin-top: 7px;
+    height: 55vh;
+    overflow-y: scroll;
+}
+.insertCompletedData{
+    display: flex;
+    padding: 12px;
+    background-color: #008088;
+    margin-top: 12px;
+    justify-content: space-between;
+}
+.insertCompletedData button{
+    padding: 12px;
+    margin: 7px;
+    background-color: white;
+    border: 1px;
+    cursor: pointer;
+}
+.btn{
+    width: 20%;
+    display: flex;
+}
+.thead{
+    position: -webkit-sticky;
+    position: sticky;
+}

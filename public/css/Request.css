@@ -1,0 +1,23 @@
+
+.popUpFormContent2{
+    box-shadow: 0 3px 20px rgb(0 0 0 / 20%);
+    background-color: white;
+    height: fit-content;
+    width: 120vh;
+    position: absolute;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 1100;
+    transform: translate(-50%,-50%) scale(1);
+}
+.choise
+{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    justify-content:center;
+}
+.choise a{
+    margin: 12px;
+}

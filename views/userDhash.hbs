@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/AdminDhash.css">
+    <link rel="stylesheet" href="../css/userDash.css">
+    
+
+
+    <link rel="stylesheet" href="../css/Register.css">
+    <link
+    href="https://fonts.googleapis.com/css?family=Poppins:300,900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>user dashboard</title>
+</head>
+<body>
+    <div class="main">
+        <header id="header" style="justify-content: space-between;">
+            <div class="logo">
+                 <img src="../images/Logo.jpg" height="80px">
+             </div>
+              
+             <div class="notification" onclick="active(menu)">
+              <span> 0</span>
+             <img src="../images/bell.png" alt="" width="18px" class="img">
+               <p>notification </p>
+               <div class="action" > 
+                <div class="menu" id="menu"> 
+                  <h3> notification</h3>
+                  <uL>
+                    <li> </li> 
+                    
+                  </uL> 
+                </div>
+             </div>
+             
+         
+          </header>
+
+          
+
+
+
+          <div class="actionOption">
+            <div class="infoContent" style="display: flex; margin-left:40%;margin-top:1%;"> 
+
+              <form action="/userDhash" method="get" id="11">
+                    <a onclick="document.getElementById('11').submit();" class="menu_content"> home </a>
+                </form> 
+
+                <form action="/userDhash" method="get" id="12">
+                    <a onclick="document.getElementById('12').submit();" class="menu_content"> what to do </a>
+                </form> 
+
+                <form action="/order" method="get" id="13">
+                    <a onclick="document.getElementById('13').submit();" class="menu_content"> order </a>
+                </form> 
+                
+                <form action="/courses" method="post" id="14">
+                    <a onclick="document.getElementById('14').submit();" class="menu_content"> courses </a>
+                </form>    
+                
+  
+
+            </div>
+        </div>
+          <div class="profile_information">
+              <div class="profileContent">
+                  <img src="../images/user.png" alt="" height="80px">
+                  <p> {{name}} </p>
+                  <p>  {{program}}</p>
+                  <p>  {{email}}</p>
+                  <form action="/logout" method="get" id="25">
+                      <a onclick="document.getElementById('25').submit();" class="fa fa-sign-out" style="cursor:pointer;font-size:large;padding-top: 0.5%;">
+                        Log out 
+                        
+
+                      </a>
+
+                  </form>
+                  
+              </div>
+
+          </div>
+          
+
+          <p style="text-align: center; padding: 20px; font-size: 23px;">  what to do ? </p>
+          <p style="text-align: center; padding: 0px; font-size: 18px; color: rgb(154, 153, 153);">  Place your mouse over the option you want
+        </p>
+          <div class="what_to_do">
+
+              <div class="optionCard">
+                  <div class="optionPanel">
+                      <div class="content">
+                        <div class="selectOption">
+                            <p> transfer major </p>
+                            <p class="description">transfer from one major to another and calculating similar courses</p>
+                            <form action="/Transfer" method="get">
+                            <button class="view_order"> lets do </button> 
+                            </form>
+                        </div>
+                        <div class="frontFace">
+                              <p> transfer major </p>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+
+                  <div class="optionCard">
+                    <div class="optionPanel">
+                        <div class="content">
+                          <div class="selectOption">
+                              <p> alternative course </p>
+                              <p class="description"> changing  from major to another and calculating similar courses</p>
+                              <form action="/alternCourse" method="get">
+                            <button class="view_order"> lets do </button> 
+                            </form>
+                          </div>
+                          <div class="frontFace">
+                            <p>   alternative course </p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                    <div class="optionCard">
+                        <div class="optionPanel">
+                            <div class="content">
+                              <div class="selectOption">
+                                  <p> Transformation Suggestion </p>
+                                  <p class="description"> changing  from major to another and calculating similar courses</p>
+                                  <form >
+                                      <button class="view_order" type="submit"> lets do </button> 
+                                  </form>
+                              </div>
+                              <div class="frontFace">
+                                <p> Transformation Suggestion </p>
+                              </div>
+                            </div>
+                        </div>
+              </div>
+          </div>
+        </div>
+    
+    
+
+
+    <footer>
+        <div class="footer">
+            @2022 copyright :
+            <a class="text-white" href="#">ANNU Register.com</a> 
+             </div>
+    </footer>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script>history.pushState(null,null,location.href);
+        window.onpopstate = function(){
+            history.go(1)
+        }</script>
+</body>
+</html>

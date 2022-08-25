@@ -1,0 +1,70 @@
+.main{
+    height: 100%;
+}
+.RegisterForm{
+    height: 100%;
+    display: flex;
+}
+.rigthsideRegisterForm{
+    width: 70%;
+    height: 100%;
+    box-shadow: 0 3px 20px rgb(0 0 0 / 20%);
+}
+.backRegisterForm{
+    background: rgb(28, 48, 77) url('../../../images/AnajahBack.jpg');
+    background-size: cover;
+    background-blend-mode: multiply;
+    width: 30%;
+    text-align: center;
+}
+.backRegisterForm p{
+    margin-top: 30px;
+    font-size: 25px;
+    color: white;
+}
+.RegisterFormContent{
+    width: 70%;
+    margin: auto;
+    height: 70%;
+    padding: 20px;
+}
+form input{
+    border: none;
+    border-radius: 2px;
+    color:#008088;
+    font-size: 15px;
+    border-left: 3px solid #008088;
+    box-shadow: 0 2px 12px rgb(0 0 0 / 20%);
+}
+.fullWidth input{
+    width: 90%;
+}
+.select{
+    margin-top: 10px;
+}
+.select select{
+    width: 49vh;
+    height: 5vh;
+    outline: none;
+    box-shadow: 0 2px 12px rgb(0 0 0 / 20%);
+    border: 1px solid #008088;
+    background-color: rgb(241, 241, 241);
+}
+.RegisterFormContent .submit{
+    margin-top:40px;
+    width: 100%;
+}
+.RegisterFormContent .submit a{
+    margin-top:40px;
+    width: 100vh;
+}
+#samePass{
+margin-top: 3px;
+color:rgb(3, 185, 3);   
+display: none;
+}
+#NotsamePass{
+ margin-top: 3px;
+ color:red;  
+ display: none;
+}
